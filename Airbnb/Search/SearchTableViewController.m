@@ -28,14 +28,12 @@ static NSString * const sectionTitles[] = {
     @"Recent Searches"
 };
 
-// City cell ID
-static NSString * const kCellCityIdentifier = @"CellCityIdentifier";
-// Location cell ID
-static NSString * const kCellLocationIdentifier = @"CellLocationIdentifier";
-// Room cell ID
-static NSString * const kCellIRoomdentifier = @"CellRoomIdentifier";
-// Recent cell ID
-static NSString * const kCellRecentIdentifier = @"CellRecentIdentifier";
+static NSString * const cellIdentifiers[] = {
+    @"CellCityIdentifier",
+    @"CellLocationIdentifier",
+    @"CellRoomIdentifier",
+    @"CellRecentIdentifier"
+};
 
 static NSUInteger kMaxRecentSearches = 10;
 
@@ -109,28 +107,7 @@ static NSUInteger kMaxRecentSearches = 10;
 }
 
 - (NSString *)cellIdentifieratIndexPath:(NSIndexPath *)indexPath {
-    // Override this is subclass
-    switch (indexPath.section) {
-        case SectionTypeCities:
-            return kCellCityIdentifier;
-            break;
-            
-        case SectionTypeLocations:
-            return kCellLocationIdentifier;
-            break;
-            
-        case SectionTypeRooms:
-            return kCellIRoomdentifier;
-            break;
-            
-        case SectionTypeRecent:
-            return kCellRecentIdentifier;
-            break;
-            
-        default:
-            return nil;
-            break;
-    }
+    return cellIdentifiers[indexPath.section];
 }
 
 - (void)configureHeaderCell:(HeaderSectionCell *)cell atSection:(NSInteger)section {

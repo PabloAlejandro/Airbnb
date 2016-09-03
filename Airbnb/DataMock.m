@@ -51,19 +51,9 @@
                      @"locations" : @[
                              
                              @{
-                                 @"id" : @"id location 1",
-                                 @"name" : @"Barcelona",
-                                 @"url" : @"http://2015.phpconference.es/wp-content/uploads/2015/05/barcelona1.jpg"
-                                 },
-                             @{
                                  @"id" : @"id location 2",
                                  @"name" : @"London",
                                  @"url" : @"https://media.timeout.com/images/100644443/image.jpg"
-                                 },
-                             @{
-                                 @"id" : @"id location 3",
-                                 @"name" : @"San Francisco",
-                                 @"url" : @"http://qlikdevgroup.com/wp-content/uploads/SanFransisco.jpg"
                                  },
                              @{
                                  @"id" : @"id location 4",
@@ -71,9 +61,19 @@
                                  @"url" : @"http://www.globalacademicinstitute.com/wp-content/uploads/photo-gallery/new_york_skyline-wide.jpg"
                                  },
                              @{
+                                 @"id" : @"id location 3",
+                                 @"name" : @"San Francisco",
+                                 @"url" : @"http://qlikdevgroup.com/wp-content/uploads/SanFransisco.jpg"
+                                 },
+                             @{
                                  @"id" : @"id location 5",
                                  @"name" : @"Tokio",
                                  @"url" : @"http://www.urlaubfotos.com/wp-content/uploads/2016/07/tokio-6.jpg"
+                                 },
+                             @{
+                                 @"id" : @"id location 1",
+                                 @"name" : @"Barcelona",
+                                 @"url" : @"http://2015.phpconference.es/wp-content/uploads/2015/05/barcelona1.jpg"
                                  }
                              ],
                      

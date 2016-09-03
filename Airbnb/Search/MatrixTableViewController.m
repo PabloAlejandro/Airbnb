@@ -17,8 +17,6 @@ static NSString * const kHeaderCellIdentifier = @"HeaderCellIdentifier";
 
 @implementation MatrixTableViewController
 
-#pragma mark - Private
-
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     // Override this is subclass
     assert(0);
@@ -41,7 +39,7 @@ static NSString * const kHeaderCellIdentifier = @"HeaderCellIdentifier";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return ((NSArray *)self.entries[section]).count;
+    return self.entries[section].count;
 }
 
 #pragma mark - UITableViewDelegate
@@ -66,7 +64,7 @@ static NSString * const kHeaderCellIdentifier = @"HeaderCellIdentifier";
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     
-    if(!((NSArray *)self.entries[section]).count) {return nil;}
+    if(!self.entries[section].count) {return nil;}
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kHeaderCellIdentifier];
     [self configureHeaderCell:cell atSection:section];

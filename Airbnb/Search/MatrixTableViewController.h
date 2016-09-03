@@ -18,7 +18,7 @@
 - (NSString *)cellIdentifieratIndexPath:(NSIndexPath *)indexPath;
 
 @property (nonatomic, weak) IBOutlet UITableView * tableView;
-@property (nonatomic, copy) NSArray * entries;
+@property (nonatomic, copy) NSArray <NSArray *> *  entries;
 
 @end
 

@@ -20,7 +20,7 @@
 		5FC37DB01D7AC90E00CB1666 /* HeaderSectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DAB1D7AC90E00CB1666 /* HeaderSectionCell.m */; };
 		5FC37DB11D7AC90E00CB1666 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DAD1D7AC90E00CB1666 /* LocationCell.m */; };
 		5FC37DB21D7AC90E00CB1666 /* RecentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DAF1D7AC90E00CB1666 /* RecentCell.m */; };
-		5FC37DB51D7AC99F00CB1666 /* HoritzontalSectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DB41D7AC99F00CB1666 /* HoritzontalSectionsViewController.m */; };
+		5FC37DB51D7AC99F00CB1666 /* AirbnbRequestTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DB41D7AC99F00CB1666 /* AirbnbRequestTableViewController.m */; };
 		5FC37DB91D7AC9E200CB1666 /* NSUserDefaults+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DB81D7AC9E200CB1666 /* NSUserDefaults+Utils.m */; };
 		5FC37DC11D7AC9EF00CB1666 /* AirbnbRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DBC1D7AC9EF00CB1666 /* AirbnbRequest.m */; };
 		5FC37DC21D7AC9EF00CB1666 /* JsonRequestRetry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DBE1D7AC9EF00CB1666 /* JsonRequestRetry.m */; };
@@ -28,6 +28,10 @@
 		5FC37DC81D7ACA0300CB1666 /* NSURLSession+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DC61D7ACA0300CB1666 /* NSURLSession+Factory.m */; };
 		5FC37DCC1D7ACA1F00CB1666 /* ServerRequestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DCB1D7ACA1F00CB1666 /* ServerRequestUtils.m */; };
 		5FC37DD01D7ACA3700CB1666 /* Airbnb.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37DCF1D7ACA3700CB1666 /* Airbnb.m */; };
+		5FDF72451D7ACE3D003BCE1C /* AirbnbCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF723E1D7ACE3D003BCE1C /* AirbnbCollectionView.m */; };
+		5FDF72481D7ACE3D003BCE1C /* HoritzontalSectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF72441D7ACE3D003BCE1C /* HoritzontalSectionsViewController.m */; };
+		5FDF724E1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF724B1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m */; };
+		5FDF724F1D7ACE60003BCE1C /* AirbnbTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF724D1D7ACE60003BCE1C /* AirbnbTableViewCell.m */; };
 		A87A8BDD3428BCB3DFC744F6 /* libPods-Airbnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8727F8687458ACB6247812A /* libPods-Airbnb.a */; };
 /* End PBXBuildFile section */
 
@@ -66,8 +70,8 @@
 		5FC37DAD1D7AC90E00CB1666 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationCell.m; path = Search/Cells/LocationCell.m; sourceTree = "<group>"; };
 		5FC37DAE1D7AC90E00CB1666 /* RecentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecentCell.h; path = Search/Cells/RecentCell.h; sourceTree = "<group>"; };
 		5FC37DAF1D7AC90E00CB1666 /* RecentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecentCell.m; path = Search/Cells/RecentCell.m; sourceTree = "<group>"; };
-		5FC37DB31D7AC99F00CB1666 /* HoritzontalSectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HoritzontalSectionsViewController.h; path = HoritzontalSections/HoritzontalSectionsViewController.h; sourceTree = "<group>"; };
-		5FC37DB41D7AC99F00CB1666 /* HoritzontalSectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HoritzontalSectionsViewController.m; path = HoritzontalSections/HoritzontalSectionsViewController.m; sourceTree = "<group>"; };
+		5FC37DB31D7AC99F00CB1666 /* AirbnbRequestTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirbnbRequestTableViewController.h; path = HoritzontalSections/AirbnbRequestTableViewController.h; sourceTree = "<group>"; };
+		5FC37DB41D7AC99F00CB1666 /* AirbnbRequestTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirbnbRequestTableViewController.m; path = HoritzontalSections/AirbnbRequestTableViewController.m; sourceTree = "<group>"; };
 		5FC37DB71D7AC9E200CB1666 /* NSUserDefaults+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSUserDefaults+Utils.h"; path = "Utils/ApplicationStateUtils/NSUserDefaults+Utils.h"; sourceTree = "<group>"; };
 		5FC37DB81D7AC9E200CB1666 /* NSUserDefaults+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSUserDefaults+Utils.m"; path = "Utils/ApplicationStateUtils/NSUserDefaults+Utils.m"; sourceTree = "<group>"; };
 		5FC37DBB1D7AC9EF00CB1666 /* AirbnbRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirbnbRequest.h; path = Utils/JsonRequest/AirbnbRequest.h; sourceTree = "<group>"; };
@@ -82,6 +86,14 @@
 		5FC37DCB1D7ACA1F00CB1666 /* ServerRequestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerRequestUtils.m; path = Utils/Network/ServerRequestUtils/ServerRequestUtils.m; sourceTree = "<group>"; };
 		5FC37DCE1D7ACA3700CB1666 /* Airbnb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Airbnb.h; path = Model/Airbnb.h; sourceTree = "<group>"; };
 		5FC37DCF1D7ACA3700CB1666 /* Airbnb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Airbnb.m; path = Model/Airbnb.m; sourceTree = "<group>"; };
+		5FDF723D1D7ACE3D003BCE1C /* AirbnbCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirbnbCollectionView.h; path = HoritzontalSections/AirbnbCollectionView.h; sourceTree = "<group>"; };
+		5FDF723E1D7ACE3D003BCE1C /* AirbnbCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirbnbCollectionView.m; path = HoritzontalSections/AirbnbCollectionView.m; sourceTree = "<group>"; };
+		5FDF72431D7ACE3D003BCE1C /* HoritzontalSectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HoritzontalSectionsViewController.h; path = HoritzontalSections/HoritzontalSectionsViewController.h; sourceTree = "<group>"; };
+		5FDF72441D7ACE3D003BCE1C /* HoritzontalSectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HoritzontalSectionsViewController.m; path = HoritzontalSections/HoritzontalSectionsViewController.m; sourceTree = "<group>"; };
+		5FDF724A1D7ACE60003BCE1C /* AirbnbCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirbnbCollectionViewCell.h; path = HoritzontalSections/Cells/AirbnbCollectionViewCell.h; sourceTree = "<group>"; };
+		5FDF724B1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirbnbCollectionViewCell.m; path = HoritzontalSections/Cells/AirbnbCollectionViewCell.m; sourceTree = "<group>"; };
+		5FDF724C1D7ACE60003BCE1C /* AirbnbTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirbnbTableViewCell.h; path = HoritzontalSections/Cells/AirbnbTableViewCell.h; sourceTree = "<group>"; };
+		5FDF724D1D7ACE60003BCE1C /* AirbnbTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirbnbTableViewCell.m; path = HoritzontalSections/Cells/AirbnbTableViewCell.m; sourceTree = "<group>"; };
 		95D6841ADBDA63C07EE0B905 /* Pods-Airbnb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb.release.xcconfig"; path = "Pods/Target Support Files/Pods-Airbnb/Pods-Airbnb.release.xcconfig"; sourceTree = "<group>"; };
 		97D40476C3300913040DC64E /* Pods-Airbnb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airbnb/Pods-Airbnb.debug.xcconfig"; sourceTree = "<group>"; };
 		AA86D6C62912450186B16597 /* Pods-AirbnbTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirbnbTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirbnbTests/Pods-AirbnbTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -191,8 +203,13 @@
 		5FC37D961D7AC86600CB1666 /* HoritzontalSections */ = {
 			isa = PBXGroup;
 			children = (
-				5FC37DB31D7AC99F00CB1666 /* HoritzontalSectionsViewController.h */,
-				5FC37DB41D7AC99F00CB1666 /* HoritzontalSectionsViewController.m */,
+				5FDF72491D7ACE40003BCE1C /* Cells */,
+				5FDF723D1D7ACE3D003BCE1C /* AirbnbCollectionView.h */,
+				5FDF723E1D7ACE3D003BCE1C /* AirbnbCollectionView.m */,
+				5FDF72431D7ACE3D003BCE1C /* HoritzontalSectionsViewController.h */,
+				5FDF72441D7ACE3D003BCE1C /* HoritzontalSectionsViewController.m */,
+				5FC37DB31D7AC99F00CB1666 /* AirbnbRequestTableViewController.h */,
+				5FC37DB41D7AC99F00CB1666 /* AirbnbRequestTableViewController.m */,
 			);
 			name = HoritzontalSections;
 			sourceTree = "<group>";
@@ -266,6 +283,17 @@
 				5FC37DCF1D7ACA3700CB1666 /* Airbnb.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		5FDF72491D7ACE40003BCE1C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5FDF724A1D7ACE60003BCE1C /* AirbnbCollectionViewCell.h */,
+				5FDF724B1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m */,
+				5FDF724C1D7ACE60003BCE1C /* AirbnbTableViewCell.h */,
+				5FDF724D1D7ACE60003BCE1C /* AirbnbTableViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		7CAA0550E1E77B2E3181B490 /* Pods */ = {
@@ -491,9 +519,12 @@
 				5FC37DD01D7ACA3700CB1666 /* Airbnb.m in Sources */,
 				5FC37DC31D7AC9EF00CB1666 /* RequestsManager.m in Sources */,
 				5FC37DB01D7AC90E00CB1666 /* HeaderSectionCell.m in Sources */,
+				5FDF724E1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m in Sources */,
 				5FC37DC11D7AC9EF00CB1666 /* AirbnbRequest.m in Sources */,
-				5FC37DB51D7AC99F00CB1666 /* HoritzontalSectionsViewController.m in Sources */,
+				5FC37DB51D7AC99F00CB1666 /* AirbnbRequestTableViewController.m in Sources */,
 				5FC37DB11D7AC90E00CB1666 /* LocationCell.m in Sources */,
+				5FDF72481D7ACE3D003BCE1C /* HoritzontalSectionsViewController.m in Sources */,
+				5FDF72451D7ACE3D003BCE1C /* AirbnbCollectionView.m in Sources */,
 				5FC37DA61D7AC8F300CB1666 /* MatrixTableViewController.m in Sources */,
 				5FC37DC21D7AC9EF00CB1666 /* JsonRequestRetry.m in Sources */,
 				5FC37DA81D7AC8F300CB1666 /* SearchTableViewController.m in Sources */,
@@ -502,6 +533,7 @@
 				5FC37DCC1D7ACA1F00CB1666 /* ServerRequestUtils.m in Sources */,
 				5FC37D991D7AC8A400CB1666 /* DataMock.m in Sources */,
 				5FC37D711D7AC83300CB1666 /* main.m in Sources */,
+				5FDF724F1D7ACE60003BCE1C /* AirbnbTableViewCell.m in Sources */,
 				5FC37DB91D7AC9E200CB1666 /* NSUserDefaults+Utils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
