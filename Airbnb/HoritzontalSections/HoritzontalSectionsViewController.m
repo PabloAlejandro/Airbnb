@@ -11,7 +11,7 @@
 #import "AirbnbCollectionView.h"
 #import "AirbnbCollectionViewCell.h"
 
-static CGFloat padding = 25.0f;
+static CGFloat padding = 20.0f;
 
 @interface HoritzontalSectionsViewController ()
 
@@ -69,14 +69,14 @@ static CGFloat padding = 25.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return CGRectGetWidth(self.view.bounds) * 0.8;
+    return CGRectGetHeight(tableView.bounds) / 3;
 }
 
 #pragma mark - UICollectionViewDelegate
 
 - (NSInteger)collectionView:(AirbnbCollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     NSUInteger index = collectionView.index;
-    return self.entries[index].count;
+    return ((NSArray *)self.entries[index]).count;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(AirbnbCollectionView *)collectionView {

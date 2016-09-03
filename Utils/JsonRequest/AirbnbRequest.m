@@ -19,92 +19,56 @@ static NSString * const kCitiesKey = @"cities";
 
 @implementation AirbnbRequest
 
-- (NSURLSessionDataTask *)retrieveDataWithCompletion:(RequestResultBlock)completion
-{
-    return [super retrieveDataWithCompletion:^(id result, NSDictionary *userInfo) {
-        completion([self airbnbFromJson:result], userInfo);
+//- (NSURLSessionDataTask *)retrieveDataWithCompletion:(RequestResultBlock)completion {
+//    return [super retrieveDataWithCompletion:^(id result, NSDictionary *userInfo) {
+//        completion([self linstingFromJson:result], userInfo);
+//    }];
+//}
+
+- (NSURLSessionDataTask *)retrieveListingWithCompletion:(RequestResultBlock)completion {
+    return [self retrieveDataWithCompletion:^(id result, NSDictionary *userInfo) {
+        completion([self linstingFromJson:result], userInfo);
     }];
 }
 
-- (Airbnb *)airbnbFromJson:(NSDictionary *)json
-{
+- (NSURLSessionDataTask *)retrievePricingWithCompletion:(RequestResultBlock)completion {
+    return [self retrieveDataWithCompletion:^(id result, NSDictionary *userInfo) {
+        completion([self linstingFromJson:result], userInfo);
+    }];
+}
+
+- (NSArray <Listing *> *)linstingFromJson:(NSDictionary *)json {
+    
     NSLog(@"json -> %@", json);
     
-    Airbnb * airbnb = nil;
+    if(![json isKindOfClass:[NSDictionary class]]) {return nil;}
     
-    if([json isKindOfClass:[NSDictionary class]]) {
-        
-        NSMutableArray * rooms_mutable = [NSMutableArray new];
-        NSMutableArray * cities_mutable = [NSMutableArray new];
-        
-        NSDictionary * airbnbDict = (NSDictionary *)[json objectForKey:kEntriesKey];
-        
-        NSArray * rooms = [airbnbDict objectForKey:kRoomsKey];
-        
-        for(NSDictionary * roomDict in rooms) {
-            Room * room = [self roomFromJson:roomDict];
-            [rooms_mutable addObject:room];
-        }
-        
-        NSArray * cities = [airbnbDict objectForKey:kCitiesKey];
-        
-        for(NSDictionary * cityDict in cities) {
-            City * city = [self cityFromJson:cityDict];
-            [cities_mutable addObject:city];
-        }
-        
-        airbnb.rooms = [NSArray arrayWithArray:rooms_mutable];
-        airbnb.cities = [NSArray arrayWithArray:cities_mutable];
+    NSArray * search_results = [json objectForKey:@"search_results"];
+    
+    NSMutableArray * listings = [NSMutableArray new];
+    for(NSDictionary * dictionary in search_results) {
+        NSDictionary * listing = [dictionary objectForKey:@"listing"];
+        [listings addObject:[[Listing alloc] initWithDictionary:listing]];
     }
     
-    return airbnb;
+    return [NSArray arrayWithArray:listings];
 }
 
-- (Room *)roomFromJson:(NSDictionary *)json {
-    Room * room = [Room new];
-    room.room_id = [json objectForKey:@"id"];
-    room.title = [json objectForKey:@"title"];
-    room.userName = [json objectForKey:@"user_name"];
-    room.information = [json objectForKey:@"information"];
-    room.image_url = [json objectForKey:@"image_url"];
-    room.user_image_url = [json objectForKey:@"user_image_url"];
-    room.dollars = [json objectForKey:@"dollars"];
-    room.rate = [json objectForKey:@"rate"];
-    room.favourite = [json objectForKey:@"favourite"];
-    return room;
-}
-
-- (City *)cityFromJson:(NSDictionary *)json {
-    City * city = [City new];
-    city.city_id = [json objectForKey:@"id"];
-    city.title = [json objectForKey:@"title"];
-    city.information = [json objectForKey:@"information"];
-    return city;
-}
-
-#pragma mark - Public
-
-- (NSURLSessionDataTask *)retrieveDataType:(AirbnbDataType)dataType WithCompletion:(RequestResultBlock)completion {
-    return [super retrieveDataWithCompletion:^(id result, NSDictionary *userInfo) {
-        
-        switch (dataType) {
-            case AirbnbDataTypeAirbnb:
-                completion([self airbnbFromJson:result], userInfo);
-                break;
-            
-            case AirbnbDataTypeCity:
-                completion([self airbnbFromJson:result], userInfo);
-                break;
-            
-            case AirbnbDataTypeRoom:
-                completion([self airbnbFromJson:result], userInfo);
-                break;
-                
-            default:
-                completion(nil, userInfo);
-                break;
-        }
-    }];
+- (NSArray <Listing *> *)pricingFromJson:(NSDictionary *)json {
+    
+    NSLog(@"json -> %@", json);
+    
+    if(![json isKindOfClass:[NSDictionary class]]) {return nil;}
+    
+    NSArray * search_results = [json objectForKey:@"search_results"];
+    
+    NSMutableArray * pricings = [NSMutableArray new];
+    for(NSDictionary * dictionary in search_results) {
+        NSDictionary * listing = [dictionary objectForKey:@"pricing"];
+        [pricings addObject:[[Listing alloc] initWithDictionary:listing]];
+    }
+    
+    return [NSArray arrayWithArray:pricings];
 }
 
 @end

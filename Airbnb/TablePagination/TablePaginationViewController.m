@@ -60,8 +60,4 @@ static NSString * const kPaginationCellID = @"PaginationCellID";
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
-}
-
 @end

@@ -63,8 +63,6 @@ static NSString * const baseURL = @"https://api.flickr.com/services/rest/?method
     
     NSURL * url = [NSURL URLWithString:urlStr];
     
-    NSLog(@"%s url -> %@ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!", __func__, url);
-    
     __weak typeof (self) weakSelf = self;
     
 //    self.airbnbRequest.parameters = @{@"page" : @(self.page)};

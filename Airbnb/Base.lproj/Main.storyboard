@@ -17,15 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="25h-ug-re0">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="25h-ug-re0">
+                                <rect key="frame" x="0.0" y="22" width="600" height="529"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AirbnbTableViewCell" id="gmq-2n-Myy" customClass="AirbnbTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gmq-2n-Myy" id="q2t-Pr-icw">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -42,7 +42,7 @@
                             <constraint firstAttribute="bottom" secondItem="25h-ug-re0" secondAttribute="bottom" id="SzA-tf-mDY"/>
                             <constraint firstItem="c1O-ND-JD0" firstAttribute="top" secondItem="25h-ug-re0" secondAttribute="bottom" id="Tjd-pw-bnF"/>
                             <constraint firstItem="25h-ug-re0" firstAttribute="leading" secondItem="ppU-YZ-WdM" secondAttribute="leading" id="aWU-VC-bNn"/>
-                            <constraint firstItem="25h-ug-re0" firstAttribute="top" secondItem="ppU-YZ-WdM" secondAttribute="top" id="gCP-IH-D4T"/>
+                            <constraint firstItem="25h-ug-re0" firstAttribute="top" secondItem="ppU-YZ-WdM" secondAttribute="top" constant="22" id="gCP-IH-D4T"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -51,6 +51,7 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="2Kj-wS-Hhi"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="25h-ug-re0" id="oJa-FX-50C"/>
                     </connections>

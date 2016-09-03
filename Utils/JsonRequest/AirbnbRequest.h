@@ -9,14 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "JsonRequestRetry.h"
 
-typedef NS_ENUM(NSUInteger, AirbnbDataType) {
-    AirbnbDataTypeAirbnb,
-    AirbnbDataTypeCity,
-    AirbnbDataTypeRoom
-};
+//typedef NS_ENUM(NSUInteger, AirbnbDataType) {
+//    AirbnbDataTypeAirbnb,
+//    AirbnbDataTypeCity,
+//    AirbnbDataTypeRoom
+//};
 
 @interface AirbnbRequest : JsonRequestRetry
 
-- (NSURLSessionDataTask *)retrieveDataType:(AirbnbDataType)dataType WithCompletion:(RequestResultBlock)completion;
+- (NSURLSessionDataTask *)retrieveListingWithCompletion:(RequestResultBlock)completion;
+- (NSURLSessionDataTask *)retrievePricingWithCompletion:(RequestResultBlock)completion;
+
+//- (NSURLSessionDataTask *)retrieveDataType:(AirbnbDataType)dataType WithCompletion:(RequestResultBlock)completion;
 
 @end

@@ -20,6 +20,8 @@
 - (UIImageView *)imageView {
     if(!_imageView) {
         _imageView = [[UIImageView alloc] initWithFrame:CGRectNull];
+        _imageView.contentMode = UIViewContentModeScaleAspectFill;
+        _imageView.layer.masksToBounds = true;
         [self addSubview:_imageView];
     }
     return _imageView;

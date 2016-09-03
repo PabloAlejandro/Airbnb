@@ -17,6 +17,7 @@
 - (NSString *)collectionView:(AirbnbCollectionView *)collectionView cellIdentifierAtIndex:(NSUInteger)index;
 
 @property (nonatomic, weak) IBOutlet UITableView * tableView;
-@property (nonatomic, copy) NSArray <NSArray *> * entries;
+//@property (nonatomic, copy) NSArray <NSArray *> * entries;
+@property (nonatomic, copy) NSArray * entries;
 
 @end
