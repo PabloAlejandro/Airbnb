@@ -17,6 +17,7 @@
 
 @interface AirbnbRequest : JsonRequestRetry
 
+- (NSURLSessionDataTask *)retrieveSearchWithCompletion:(RequestResultBlock)completion;
 - (NSURLSessionDataTask *)retrieveListingWithCompletion:(RequestResultBlock)completion;
 - (NSURLSessionDataTask *)retrievePricingWithCompletion:(RequestResultBlock)completion;
 

@@ -25,6 +25,12 @@ static NSString * const kCitiesKey = @"cities";
 //    }];
 //}
 
+- (NSURLSessionDataTask *)retrieveSearchWithCompletion:(RequestResultBlock)completion {
+    return [self retrieveDataWithCompletion:^(id result, NSDictionary *userInfo) {
+        completion([self searchFromJson:result], userInfo);
+    }];
+}
+
 - (NSURLSessionDataTask *)retrieveListingWithCompletion:(RequestResultBlock)completion {
     return [self retrieveDataWithCompletion:^(id result, NSDictionary *userInfo) {
         completion([self linstingFromJson:result], userInfo);
@@ -35,6 +41,23 @@ static NSString * const kCitiesKey = @"cities";
     return [self retrieveDataWithCompletion:^(id result, NSDictionary *userInfo) {
         completion([self linstingFromJson:result], userInfo);
     }];
+}
+
+- (NSArray <Search *> *)searchFromJson:(NSDictionary *)json {
+    
+    NSLog(@"json -> %@", json);
+    
+    if(![json isKindOfClass:[NSDictionary class]]) {return nil;}
+    
+    NSArray * search_results = [json objectForKey:@"search_results"];
+    
+    NSMutableArray * searches = [NSMutableArray new];
+    for(NSDictionary * dictionary in search_results) {
+        Search * search = [[Search alloc] initWithDictionary:dictionary];
+        [searches addObject:search];
+    }
+    
+    return [NSArray arrayWithArray:searches];
 }
 
 - (NSArray <Listing *> *)linstingFromJson:(NSDictionary *)json {
@@ -64,7 +87,7 @@ static NSString * const kCitiesKey = @"cities";
     
     NSMutableArray * pricings = [NSMutableArray new];
     for(NSDictionary * dictionary in search_results) {
-        NSDictionary * listing = [dictionary objectForKey:@"pricing"];
+        NSDictionary * listing = [dictionary objectForKey:@"pricing_quote"];
         [pricings addObject:[[Listing alloc] initWithDictionary:listing]];
     }
     

@@ -8,6 +8,24 @@
 
 #import "Airbnb.h"
 
+@implementation Search
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    if(self = [super init]) {
+        
+        _listing = [[Listing alloc] initWithDictionary:[dictionary objectForKey:@"listing"]];
+        _pricing = [[Pricing alloc] initWithDictionary:[dictionary objectForKey:@"pricing_quote"]];
+        
+        NSLog(@"PRICING -> %@", [dictionary objectForKey:@"pricing_quote"]);
+        
+        _viewed_at = [dictionary objectForKey:@"viewed_at"];
+    }
+    return self;
+}
+
+@end
+
+
 @implementation Listing
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
@@ -83,12 +101,18 @@
         _check_in = [dictionary objectForKey:@"check_in"];
         _check_out = [dictionary objectForKey:@"check_out"];
         _guests = [dictionary objectForKey:@"guests"];
-        _number_of_adults = [dictionary objectForKey:@"number_of_adults"];
-        _number_of_children = [dictionary objectForKey:@"number_of_children"];
-        _number_of_infants = [dictionary objectForKey:@"number_of_infants"];
+        
+        NSDictionary * guest_details = [dictionary objectForKey:@"guest_details"];
+        _number_of_adults = [guest_details objectForKey:@"number_of_adults"];
+        _number_of_children = [guest_details objectForKey:@"number_of_children"];
+        _number_of_infants = [guest_details objectForKey:@"number_of_infants"];
+        
         _price = [dictionary objectForKey:@"price"];
-        _amount = [dictionary objectForKey:@"amount"];
-        _currency = [dictionary objectForKey:@"currency"];
+        
+        NSDictionary * rate = [dictionary objectForKey:@"rate"];
+        _amount = [rate objectForKey:@"amount"];
+        _currency = [rate objectForKey:@"currency"];
+        
         _rate_type = [dictionary objectForKey:@"rate_type"];
     }
     return self;
@@ -97,7 +121,7 @@
 @end
 
 
-@implementation Search
+@implementation Recent
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     if(self = [super init]) {

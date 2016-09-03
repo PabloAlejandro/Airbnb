@@ -8,7 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@class Listing, User, Pricing, Search;
+@class Listing, User, Pricing, Search, Recent;
+
+@interface Search : NSObject
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
+@property (nonatomic, strong) Listing * listing;
+@property (nonatomic, strong) Pricing * pricing;
+@property (nonatomic, strong) NSDate * viewed_at;
+
+@end
+
 
 @interface Listing : NSObject
 
@@ -87,7 +98,7 @@
 @end
 
 
-@interface Search : NSObject
+@interface Recent : NSObject
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0655DA8F59195BC530D7DAD4 /* libPods-AirbnbTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 371F0CEC361EA9D0DBACC7C6 /* libPods-AirbnbTests.a */; };
+		5FB36F1F1D7B646200D4037D /* ListingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB36F1E1D7B646200D4037D /* ListingViewController.m */; };
+		5FB36F221D7B64FD00D4037D /* ListingTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB36F211D7B64FD00D4037D /* ListingTableCell.m */; };
+		5FB36F281D7B706600D4037D /* favourite@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB36F251D7B706600D4037D /* favourite@1x.png */; };
+		5FB36F291D7B706600D4037D /* favourite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB36F261D7B706600D4037D /* favourite@2x.png */; };
+		5FB36F2A1D7B706600D4037D /* favourite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FB36F271D7B706600D4037D /* favourite@3x.png */; };
 		5FC37D711D7AC83300CB1666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37D701D7AC83300CB1666 /* main.m */; };
 		5FC37D741D7AC83300CB1666 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC37D731D7AC83300CB1666 /* AppDelegate.m */; };
 		5FC37D7A1D7AC83300CB1666 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FC37D781D7AC83300CB1666 /* Main.storyboard */; };
@@ -49,6 +54,13 @@
 
 /* Begin PBXFileReference section */
 		371F0CEC361EA9D0DBACC7C6 /* libPods-AirbnbTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AirbnbTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5FB36F1D1D7B646200D4037D /* ListingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingViewController.h; path = ListingViewController/ListingViewController.h; sourceTree = "<group>"; };
+		5FB36F1E1D7B646200D4037D /* ListingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingViewController.m; path = ListingViewController/ListingViewController.m; sourceTree = "<group>"; };
+		5FB36F201D7B64FD00D4037D /* ListingTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingTableCell.h; path = ListingViewController/ListingTableCell.h; sourceTree = "<group>"; };
+		5FB36F211D7B64FD00D4037D /* ListingTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingTableCell.m; path = ListingViewController/ListingTableCell.m; sourceTree = "<group>"; };
+		5FB36F251D7B706600D4037D /* favourite@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favourite@1x.png"; path = "ListingViewController/assets/favourite@1x.png"; sourceTree = "<group>"; };
+		5FB36F261D7B706600D4037D /* favourite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favourite@2x.png"; path = "ListingViewController/assets/favourite@2x.png"; sourceTree = "<group>"; };
+		5FB36F271D7B706600D4037D /* favourite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "favourite@3x.png"; path = "ListingViewController/assets/favourite@3x.png"; sourceTree = "<group>"; };
 		5FC37D6C1D7AC83300CB1666 /* Airbnb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airbnb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FC37D701D7AC83300CB1666 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5FC37D721D7AC83300CB1666 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,6 +139,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FB36F1C1D7B644C00D4037D /* ListingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5FB36F241D7B704E00D4037D /* assets */,
+				5FB36F231D7B650000D4037D /* Cells */,
+				5FB36F1D1D7B646200D4037D /* ListingViewController.h */,
+				5FB36F1E1D7B646200D4037D /* ListingViewController.m */,
+			);
+			name = ListingViewController;
+			sourceTree = "<group>";
+		};
+		5FB36F231D7B650000D4037D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5FB36F201D7B64FD00D4037D /* ListingTableCell.h */,
+				5FB36F211D7B64FD00D4037D /* ListingTableCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		5FB36F241D7B704E00D4037D /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				5FB36F251D7B706600D4037D /* favourite@1x.png */,
+				5FB36F261D7B706600D4037D /* favourite@2x.png */,
+				5FB36F271D7B706600D4037D /* favourite@3x.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
 		5FC37D631D7AC83300CB1666 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +197,7 @@
 				5FC37D961D7AC86600CB1666 /* HoritzontalSections */,
 				5FC37D941D7AC85A00CB1666 /* Search */,
 				5FDF72501D7AE8F8003BCE1C /* TablePagination */,
+				5FB36F1C1D7B644C00D4037D /* ListingViewController */,
 				5FC37D721D7AC83300CB1666 /* AppDelegate.h */,
 				5FC37D731D7AC83300CB1666 /* AppDelegate.m */,
 				5FC37D971D7AC8A400CB1666 /* DataMock.h */,
@@ -420,7 +463,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB36F291D7B706600D4037D /* favourite@2x.png in Resources */,
+				5FB36F2A1D7B706600D4037D /* favourite@3x.png in Resources */,
 				5FC37D7F1D7AC83300CB1666 /* LaunchScreen.storyboard in Resources */,
+				5FB36F281D7B706600D4037D /* favourite@1x.png in Resources */,
 				5FC37D7C1D7AC83300CB1666 /* Assets.xcassets in Resources */,
 				5FC37D7A1D7AC83300CB1666 /* Main.storyboard in Resources */,
 			);
@@ -540,6 +586,7 @@
 				5FC37DB01D7AC90E00CB1666 /* HeaderSectionCell.m in Sources */,
 				5FDF724E1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m in Sources */,
 				5FC37DC11D7AC9EF00CB1666 /* AirbnbRequest.m in Sources */,
+				5FB36F1F1D7B646200D4037D /* ListingViewController.m in Sources */,
 				5FC37DB51D7AC99F00CB1666 /* AirbnbRequestTableViewController.m in Sources */,
 				5FDF72531D7AE916003BCE1C /* TablePaginationViewController.m in Sources */,
 				5FC37DB11D7AC90E00CB1666 /* LocationCell.m in Sources */,
@@ -547,6 +594,7 @@
 				5FDF72451D7ACE3D003BCE1C /* AirbnbCollectionView.m in Sources */,
 				5FC37DA61D7AC8F300CB1666 /* MatrixTableViewController.m in Sources */,
 				5FC37DC21D7AC9EF00CB1666 /* JsonRequestRetry.m in Sources */,
+				5FB36F221D7B64FD00D4037D /* ListingTableCell.m in Sources */,
 				5FC37DA81D7AC8F300CB1666 /* SearchTableViewController.m in Sources */,
 				5FC37DC81D7ACA0300CB1666 /* NSURLSession+Factory.m in Sources */,
 				5FC37D741D7AC83300CB1666 /* AppDelegate.m in Sources */,
