@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HoritzontalSectionsViewController.h
 //  Airbnb
 //
 //  Created by Pau on 03/09/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HoritzontalSectionsViewController : UIViewController
 
 @end
-
