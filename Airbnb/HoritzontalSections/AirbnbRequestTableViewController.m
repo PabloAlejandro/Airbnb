@@ -52,6 +52,8 @@ static NSString * const myCollectionCellID = @"MyCollectionCellID";
     // Do any additional setup after loading the view, typically from a nib.
     
     /*
+    [self.downloadTask cancel];
+     
     NSURL * url = [NSURL URLWithString:kEndpoint];
     
     __weak typeof (self) weakSelf = self;
@@ -84,9 +86,6 @@ static NSString * const myCollectionCellID = @"MyCollectionCellID";
     // Override this is subclass
     
     NSObject * object = self.entries[index][indexPath.row];
-    
-    NSLog(@"object -> %@", object);
-    NSLog(@"url --->>> %@", [object valueForKeyPath:@"url"]);
     
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:[object valueForKeyPath:@"url"]]];
     

@@ -32,6 +32,8 @@
 		5FDF72481D7ACE3D003BCE1C /* HoritzontalSectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF72441D7ACE3D003BCE1C /* HoritzontalSectionsViewController.m */; };
 		5FDF724E1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF724B1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m */; };
 		5FDF724F1D7ACE60003BCE1C /* AirbnbTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF724D1D7ACE60003BCE1C /* AirbnbTableViewCell.m */; };
+		5FDF72531D7AE916003BCE1C /* TablePaginationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF72521D7AE916003BCE1C /* TablePaginationViewController.m */; };
+		5FDF72561D7AEBC6003BCE1C /* PaginatedRequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FDF72551D7AEBC6003BCE1C /* PaginatedRequestViewController.m */; };
 		A87A8BDD3428BCB3DFC744F6 /* libPods-Airbnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F8727F8687458ACB6247812A /* libPods-Airbnb.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +96,10 @@
 		5FDF724B1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirbnbCollectionViewCell.m; path = HoritzontalSections/Cells/AirbnbCollectionViewCell.m; sourceTree = "<group>"; };
 		5FDF724C1D7ACE60003BCE1C /* AirbnbTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirbnbTableViewCell.h; path = HoritzontalSections/Cells/AirbnbTableViewCell.h; sourceTree = "<group>"; };
 		5FDF724D1D7ACE60003BCE1C /* AirbnbTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirbnbTableViewCell.m; path = HoritzontalSections/Cells/AirbnbTableViewCell.m; sourceTree = "<group>"; };
+		5FDF72511D7AE916003BCE1C /* TablePaginationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TablePaginationViewController.h; path = TablePagination/TablePaginationViewController.h; sourceTree = "<group>"; };
+		5FDF72521D7AE916003BCE1C /* TablePaginationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TablePaginationViewController.m; path = TablePagination/TablePaginationViewController.m; sourceTree = "<group>"; };
+		5FDF72541D7AEBC6003BCE1C /* PaginatedRequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaginatedRequestViewController.h; path = TablePagination/PaginatedRequestViewController.h; sourceTree = "<group>"; };
+		5FDF72551D7AEBC6003BCE1C /* PaginatedRequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaginatedRequestViewController.m; path = TablePagination/PaginatedRequestViewController.m; sourceTree = "<group>"; };
 		95D6841ADBDA63C07EE0B905 /* Pods-Airbnb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb.release.xcconfig"; path = "Pods/Target Support Files/Pods-Airbnb/Pods-Airbnb.release.xcconfig"; sourceTree = "<group>"; };
 		97D40476C3300913040DC64E /* Pods-Airbnb.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airbnb.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airbnb/Pods-Airbnb.debug.xcconfig"; sourceTree = "<group>"; };
 		AA86D6C62912450186B16597 /* Pods-AirbnbTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirbnbTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AirbnbTests/Pods-AirbnbTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +154,7 @@
 				5FC37DCD1D7ACA2400CB1666 /* Model */,
 				5FC37D961D7AC86600CB1666 /* HoritzontalSections */,
 				5FC37D941D7AC85A00CB1666 /* Search */,
+				5FDF72501D7AE8F8003BCE1C /* TablePagination */,
 				5FC37D721D7AC83300CB1666 /* AppDelegate.h */,
 				5FC37D731D7AC83300CB1666 /* AppDelegate.m */,
 				5FC37D971D7AC8A400CB1666 /* DataMock.h */,
@@ -294,6 +301,17 @@
 				5FDF724D1D7ACE60003BCE1C /* AirbnbTableViewCell.m */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		5FDF72501D7AE8F8003BCE1C /* TablePagination */ = {
+			isa = PBXGroup;
+			children = (
+				5FDF72511D7AE916003BCE1C /* TablePaginationViewController.h */,
+				5FDF72521D7AE916003BCE1C /* TablePaginationViewController.m */,
+				5FDF72541D7AEBC6003BCE1C /* PaginatedRequestViewController.h */,
+				5FDF72551D7AEBC6003BCE1C /* PaginatedRequestViewController.m */,
+			);
+			name = TablePagination;
 			sourceTree = "<group>";
 		};
 		7CAA0550E1E77B2E3181B490 /* Pods */ = {
@@ -515,6 +533,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FDF72561D7AEBC6003BCE1C /* PaginatedRequestViewController.m in Sources */,
 				5FC37DB21D7AC90E00CB1666 /* RecentCell.m in Sources */,
 				5FC37DD01D7ACA3700CB1666 /* Airbnb.m in Sources */,
 				5FC37DC31D7AC9EF00CB1666 /* RequestsManager.m in Sources */,
@@ -522,6 +541,7 @@
 				5FDF724E1D7ACE60003BCE1C /* AirbnbCollectionViewCell.m in Sources */,
 				5FC37DC11D7AC9EF00CB1666 /* AirbnbRequest.m in Sources */,
 				5FC37DB51D7AC99F00CB1666 /* AirbnbRequestTableViewController.m in Sources */,
+				5FDF72531D7AE916003BCE1C /* TablePaginationViewController.m in Sources */,
 				5FC37DB11D7AC90E00CB1666 /* LocationCell.m in Sources */,
 				5FDF72481D7ACE3D003BCE1C /* HoritzontalSectionsViewController.m in Sources */,
 				5FDF72451D7ACE3D003BCE1C /* AirbnbCollectionView.m in Sources */,

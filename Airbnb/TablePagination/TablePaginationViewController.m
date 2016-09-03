@@ -1,40 +1,39 @@
 //
-//  MatrixTableViewController.m
-//  Search
+//  TablePaginationViewController.m
+//  Airbnb
 //
-//  Created by Pau on 02/09/2016.
+//  Created by Pau on 03/09/2016.
 //  Copyright © 2016 Pau. All rights reserved.
 //
 
-#import "MatrixTableViewController.h"
+#import "TablePaginationViewController.h"
 
-@interface MatrixTableViewController ()
+static NSString * const kPaginationCellID = @"PaginationCellID";
 
-@end
+@implementation TablePaginationViewController
 
-@implementation MatrixTableViewController
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)tableViewShouldLoadMoreEntries {
     // Override this in subclass
 }
 
-- (void)configureHeaderCell:(UITableViewCell *)cell atSection:(NSInteger)section {
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     // Override this in subclass
+    cell.textLabel.text = self.entries[indexPath.row];
 }
 
 - (NSString *)cellIdentifieratIndexPath:(NSIndexPath *)indexPath {
     // Override this in subclass
-    assert(0);
+    return kPaginationCellID;
 }
 
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.entries.count;
+    return self.entries.count ? 1 : 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.entries[section].count;
+    return self.entries.count;
 }
 
 #pragma mark - UITableViewDelegate
@@ -48,6 +47,10 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    if(indexPath.row == [tableView numberOfRowsInSection:indexPath.section] - 1) {
+        [self tableViewShouldLoadMoreEntries];
+    }
+    
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
     }
@@ -57,26 +60,8 @@
     }
 }
 
-- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    
-    if(!self.entries[section].count) {return nil;}
-    
-    static NSString * const kHeaderCellIdentifier = @"HeaderCellIdentifier";
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:kHeaderCellIdentifier];
-    [self configureHeaderCell:cell atSection:section];
-    
-    UIView *view = [[UIView alloc] initWithFrame:cell.frame];
-    [view addSubview:cell];
-    
-    return view;
-}
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (CGRectGetHeight(tableView.frame) - 60) / 3;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return ((NSArray *)self.entries[section]).count ? 60 : 0;
+    return 80;
 }
 
 @end

@@ -28,6 +28,8 @@ static NSString * const kCitiesKey = @"cities";
 
 - (Airbnb *)airbnbFromJson:(NSDictionary *)json
 {
+    NSLog(@"json -> %@", json);
+    
     Airbnb * airbnb = nil;
     
     if([json isKindOfClass:[NSDictionary class]]) {
