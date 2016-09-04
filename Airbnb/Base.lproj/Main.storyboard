@@ -375,6 +375,21 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4W1-6J-Q3H">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Ynm-jK-Glr">
+                                    <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="P9M-5N-0ja">
+                                            <rect key="frame" x="290" y="12" width="20" height="20"/>
+                                            <color key="color" red="0.29420096499999998" green="0.77286485599999999" blue="0.52440890610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="P9M-5N-0ja" firstAttribute="centerX" secondItem="Ynm-jK-Glr" secondAttribute="centerX" id="eda-id-jHi"/>
+                                        <constraint firstItem="P9M-5N-0ja" firstAttribute="centerY" secondItem="Ynm-jK-Glr" secondAttribute="centerY" id="hQe-yE-n4u"/>
+                                    </constraints>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaginationCellID" textLabel="Epe-cd-Ozc" detailTextLabel="80e-bD-7Em" style="IBUITableViewCellStyleSubtitle" id="DHJ-xq-z8A">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -417,6 +432,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="7kU-cR-IH7"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="P9M-5N-0ja" id="JJz-fh-lgo"/>
                         <outlet property="tableView" destination="4W1-6J-Q3H" id="55m-r7-6Ye"/>
                     </connections>
                 </viewController>

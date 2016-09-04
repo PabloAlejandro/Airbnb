@@ -19,6 +19,8 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
 @property (nonatomic, assign) NSUInteger page;
 @property (nonatomic, assign) BOOL downloading;
 
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * activityIndicator;
+
 @end
 
 @implementation PaginatedRequestViewController
@@ -35,6 +37,7 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
     
     if(self.downloading) {return;}
     
+    [self.activityIndicator startAnimating];
     self.downloading = true;
     
     [self.downloadTask cancel];
@@ -50,6 +53,7 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
         strongSelf.downloading = false;
         strongSelf.entries = [strongSelf.entries arrayByAddingObjectsFromArray:searches];
         [strongSelf.tableView reloadData];
+        [strongSelf.activityIndicator stopAnimating];
     }];
 }
 
