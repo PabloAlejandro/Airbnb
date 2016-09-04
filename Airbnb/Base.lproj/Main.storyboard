@@ -537,7 +537,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fQW-Ag-xbu"/>
                     <connections>
-                        <outlet property="tableView" destination="hrj-7c-hGQ" id="nHl-I0-jay"/>
+                        <outlet property="tableView" destination="hrj-7c-hGQ" id="KBh-Kh-XJH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0xY-iL-1u5" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,4 +10,11 @@
 
 @interface ListingViewController : TablePaginationViewController
 
+@property (nonatomic, weak) IBOutlet UIView * tableHeaderView;
+@property (nonatomic, weak) IBOutlet UILabel * tableHeaderTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel * tableHeaderSubtitleLabel;
+@property (nonatomic, weak) IBOutlet UIButton * tableHeaderFiltersButton;
+@property (nonatomic, weak) IBOutlet UIButton * tableHeaderMapButton;
+@property (nonatomic, weak) IBOutlet UIButton * tableHeaderBackButton;
+
 @end

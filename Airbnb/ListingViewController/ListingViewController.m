@@ -27,11 +27,12 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
     
     NSURL * url = [NSURL URLWithString:kEndpoint];
     
-    __weak typeof (self) weakSelf = self;
-    
+    self.airbnbRequest = [AirbnbRequest new];
+    self.airbnbRequest.retries = 0;
     self.airbnbRequest.url = url;
     self.airbnbRequest.parameters = [self requestParamsForClientId:@"3092nxybyb0otqw18e8nh5nty" locale:@"en-US" currency:@"USD" format:@"for_search_results_with_minimal_pricing" limit:@(20) offset:@(0) fetch_facets:@(true) guests:@(1) ib:@(false) ib_add_photo_flow:@(true) location:@"Lake%20Tahoe%2C%20CA%2C%20US" min_bathrooms:@(0) min_bedrooms:@(0) min_num_pic_urls:@(10) price_max:@(210) price_min:@(40) sort:@(1) user_lat:@(37.3398634) user_lng:@(-122.0455164)];
     
+    __weak typeof (self) weakSelf = self;
     [self.airbnbRequest retrieveSearchWithCompletion:^(NSArray <Search *> * searches, NSDictionary *userInfo) {
         __strong typeof (self) strongSelf = weakSelf;
         strongSelf.entries = searches;
@@ -94,16 +95,6 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsMake(0, 20, 0, 20)];
     }
-}
-
-#pragma mark - Getters
-
-- (AirbnbRequest *)airbnbRequest {
-    if(!_airbnbRequest) {
-        _airbnbRequest = [AirbnbRequest new];
-        _airbnbRequest.retries = 0;
-    }
-    return _airbnbRequest;
 }
 
 @end
