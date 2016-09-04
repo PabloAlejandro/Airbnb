@@ -19,8 +19,6 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
 @property (nonatomic, assign) NSUInteger page;
 @property (nonatomic, assign) BOOL downloading;
 
-@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * activityIndicator;
-
 @end
 
 @implementation PaginatedRequestViewController

@@ -14,6 +14,7 @@
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)cellIdentifieratIndexPath:(NSIndexPath *)indexPath;
 
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView * activityIndicator;
 @property (nonatomic, weak) IBOutlet UITableView * tableView;
 @property (nonatomic, copy) NSArray *  entries;
 
