@@ -25,7 +25,6 @@ static CGFloat padding = 20.0f;
 
 - (void)configureCollectionViewCell:(AirbnbCollectionViewCell *)cell atIndex:(NSUInteger)index indexPath:(NSIndexPath *)indexPath {
     // Override this is subclass
-    assert(0);
 }
 
 - (NSString *)collectionView:(AirbnbCollectionView *)collectionView cellIdentifierAtIndex:(NSUInteger)index {
@@ -61,8 +60,7 @@ static CGFloat padding = 20.0f;
     [cell.collectionView setContentOffset:CGPointMake(horizontalOffset, 0)];
 }
 
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(AirbnbTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(AirbnbTableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     CGFloat horizontalOffset = cell.collectionView.contentOffset.x;
     NSUInteger index = cell.collectionView.index;
     self.contentOffsetDictionary[[@(index) stringValue]] = @(horizontalOffset);
@@ -104,7 +102,7 @@ static CGFloat padding = 20.0f;
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(0, padding/2, 0, padding/2);
+    return UIEdgeInsetsMake(0, padding / 2, 0, padding / 2);
 }
 
 #pragma mark - Getters
