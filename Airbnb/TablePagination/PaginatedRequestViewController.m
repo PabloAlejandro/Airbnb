@@ -16,7 +16,6 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
 
 @property (nonatomic, strong) AirbnbRequest * airbnbRequest;
 @property (nonatomic, strong) NSURLSessionDataTask * downloadTask;
-@property (nonatomic, assign) NSUInteger page;
 @property (nonatomic, assign) BOOL downloading;
 
 @end
@@ -55,6 +54,7 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
     }];
 }
 
+// Build the request
 - (NSDictionary *)requestParamsForClientId:(NSString *)client_id locale:(NSString *)locale currency:(NSString *)currency format:(NSString *)format limit:(NSNumber *)limit offset:(NSNumber *)offset fetch_facets:(NSNumber *)fetch_facets guests:(NSNumber *)guests ib:(NSNumber *)ib ib_add_photo_flow:(NSNumber *)ib_add_photo_flow location:(NSString *)location min_bathrooms:(NSNumber *)min_bathrooms min_bedrooms:(NSNumber *)min_bedrooms min_num_pic_urls:(NSNumber *)min_num_pic_urls price_max:(NSNumber *)price_max price_min:(NSNumber *)price_min sort:(NSNumber *)sort user_lat:(NSNumber *)user_lat user_lng:(NSNumber *)user_lng {
     return @{
              @"client_id" : client_id ? : @"",
@@ -67,7 +67,7 @@ static NSString * const kEndpoint = @"https://api.airbnb.com/v2/search_results";
              @"guests" : guests ? : @"",
              @"ib" : ib ? : @"",
              @"ib_add_photo_flow" : ib_add_photo_flow ? : @"",
-             @"location" : locale ? : @"",
+             @"location" : location ? : @"",
              @"min_bathrooms" : min_bathrooms ? : @"",
              @"min_bedrooms" : min_bedrooms ? : @"",
              @"min_num_pic_urls" : min_num_pic_urls ? : @"",

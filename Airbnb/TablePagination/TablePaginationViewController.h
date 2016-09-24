@@ -17,5 +17,6 @@
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView * activityIndicator;
 @property (nonatomic, weak) IBOutlet UITableView * tableView;
 @property (nonatomic, copy) NSArray *  entries;
+@property (nonatomic, assign) NSUInteger page;
 
 @end
